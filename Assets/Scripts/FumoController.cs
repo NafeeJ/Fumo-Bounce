@@ -5,7 +5,7 @@ using UnityEngine;
 public class FumoController : MonoBehaviour
 {
     public float movementSpeed;
-    public Rigidbody2D fumoRigidbody;
+    private Rigidbody2D fumoRigidbody;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,11 @@ public class FumoController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    void FixedUpdate()
     {
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
@@ -27,7 +32,7 @@ public class FumoController : MonoBehaviour
 
         if (Input.GetAxisRaw("Vertical") > 0f)
         {
-            fumoRigidbody.AddForce(new Vector2(0f, movementSpeed), ForceMode2D.Force);
+            fumoRigidbody.AddForce(new Vector2(0f, movementSpeed * 1.4f), ForceMode2D.Force);
         }
         else if (Input.GetAxisRaw("Vertical") < 0f)
         {
