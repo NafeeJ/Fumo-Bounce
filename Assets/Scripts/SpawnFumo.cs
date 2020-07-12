@@ -24,7 +24,7 @@ public class SpawnFumo : MonoBehaviour
 
         foreach (FumoController fumo in fumos)
         {
-            Destroy(fumo.gameObject); // :(
+            StartCoroutine(fumo.DisappearFumoCoroutine());
         }
     }
 }
