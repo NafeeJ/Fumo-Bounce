@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class SpawnFumo : MonoBehaviour
 {
+    public GameObject fumoToSpawn;
 
-    public FumoController cirno;
-
-    // Start is called before the first frame update
-    void Start()
+    public void InstantiateFumo()
     {
-        
-    }
-
-    public void SpawnCirno()
-    {
-        Instantiate(cirno, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(fumoToSpawn, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
     public void Clear()

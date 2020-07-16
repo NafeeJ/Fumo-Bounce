@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class SceneController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            mySpawnFumo.SpawnCirno();
+            mySpawnFumo.InstantiateFumo();
         }
         if (Input.GetKeyDown(KeyCode.C))
         {

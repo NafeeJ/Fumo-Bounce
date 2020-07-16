@@ -20,20 +20,20 @@ public class FumoController : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
-            fumoRigidbody.AddForce(new Vector2(movementSpeed, 0f), ForceMode2D.Force);
+            fumoRigidbody.AddForce(new Vector2(movementSpeed, 0f));
         }
         else if (Input.GetAxisRaw("Horizontal") < 0f)
         {
-            fumoRigidbody.AddForce(new Vector2(-movementSpeed, 0f), ForceMode2D.Force);
+            fumoRigidbody.AddForce(new Vector2(-movementSpeed, 0f));
         }
 
         if (Input.GetAxisRaw("Vertical") > 0f)
         {
-            fumoRigidbody.AddForce(new Vector2(0f, movementSpeed * 1.2f), ForceMode2D.Force);
+            fumoRigidbody.AddForce(new Vector2(0f, movementSpeed * 1.2f));
         }
         else if (Input.GetAxisRaw("Vertical") < 0f)
         {
-            fumoRigidbody.AddForce(new Vector2(0f, -movementSpeed * 0.8f), ForceMode2D.Force);
+            fumoRigidbody.AddForce(new Vector2(0f, -movementSpeed * 0.8f));
         }
     }
 

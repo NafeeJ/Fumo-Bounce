@@ -1,7 +1,7 @@
 {
-"companyName": "DefaultCompany",
-"productName": "Fumo Bounce",
-"productVersion": "0.1",
+"companyName": "Nafee Workshop",
+"productName": "Fumo-Bounce",
+"productVersion": "1.0",
 "dataUrl": "docs.data.unityweb",
 "wasmCodeUrl": "docs.wasm.code.unityweb",
 "wasmFrameworkUrl": "docs.wasm.framework.unityweb",
