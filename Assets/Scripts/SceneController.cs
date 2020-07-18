@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //QualitySettings.vSyncCount = 1;
         mySpawnFumo = FindObjectOfType<SpawnFumo>();
     }
 
