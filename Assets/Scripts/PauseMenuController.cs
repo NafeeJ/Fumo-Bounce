@@ -11,6 +11,9 @@ public class PauseMenuController : MonoBehaviour
     public GameObject chen;
     public GameObject flandre;
     public GameObject marisa;
+    public GameObject patchouli;
+    public GameObject ran;
+    public GameObject reimu;
 
     private bool gamePaused;
     private SpawnFumo mySpawnFumo;
@@ -71,6 +74,15 @@ public class PauseMenuController : MonoBehaviour
                 break;
             case 4:
                 mySpawnFumo.fumoToSpawn = marisa;
+                break;
+            case 5:
+                mySpawnFumo.fumoToSpawn = patchouli;
+                break;
+            case 6:
+                mySpawnFumo.fumoToSpawn = ran;
+                break;
+            case 7:
+                mySpawnFumo.fumoToSpawn = reimu;
                 break;
         }
     }
