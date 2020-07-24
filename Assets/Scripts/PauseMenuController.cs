@@ -1,31 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public GameObject pauseMenu;
-    public GameObject cirno;
-    public GameObject alice;
-    public GameObject chen;
-    public GameObject flandre;
-    public GameObject marisa;
-    public GameObject patchouli;
-    public GameObject ran;
-    public GameObject reimu;
+    [SerializeField]
+    private GameObject pauseMenu;
+
+    [SerializeField]
+    private GameObject alice;
+    [SerializeField]
+    private GameObject chen;
+    [SerializeField]
+    private GameObject cirno;
+    [SerializeField]
+    private GameObject flandre;
+    [SerializeField]
+    private GameObject marisa;
+    [SerializeField]
+    private GameObject patchouli;
+    [SerializeField]
+    private GameObject ran;
+    [SerializeField]
+    private GameObject reimu;
+    [SerializeField]
+    private GameObject remilia;
+    [SerializeField]
+    private GameObject sakuya;
+    [SerializeField]
+    private GameObject yukari;
 
     private bool gamePaused;
     private SpawnFumo mySpawnFumo;
 
-    // Start is called before the first frame update
     void Start()
     {
         mySpawnFumo = FindObjectOfType<SpawnFumo>();
         Resume();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -61,13 +72,13 @@ public class PauseMenuController : MonoBehaviour
         switch (selection)
         {
             case 0:
-                mySpawnFumo.fumoToSpawn = cirno;
-                break;
-            case 1:
                 mySpawnFumo.fumoToSpawn = alice;
                 break;
-            case 2:
+            case 1:
                 mySpawnFumo.fumoToSpawn = chen;
+                break;
+            case 2:
+                mySpawnFumo.fumoToSpawn = cirno;
                 break;
             case 3:
                 mySpawnFumo.fumoToSpawn = flandre;
@@ -83,6 +94,15 @@ public class PauseMenuController : MonoBehaviour
                 break;
             case 7:
                 mySpawnFumo.fumoToSpawn = reimu;
+                break;
+            case 8:
+                mySpawnFumo.fumoToSpawn = remilia;
+                break;
+            case 9:
+                mySpawnFumo.fumoToSpawn = sakuya;
+                break;
+            case 10:
+                mySpawnFumo.fumoToSpawn = yukari;
                 break;
         }
     }

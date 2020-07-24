@@ -1,10 +1,10 @@
-﻿/*Modified from:
+﻿/*
+Modified from:
 https://forum.unity.com/threads/collision-with-sides-of-screen.228865/
 https://gamedev.stackexchange.com/questions/144575/how-to-force-keep-the-aspect-ratio-and-specific-resolution-without-stretching-th
 */
 
 using UnityEngine;
-using System.Collections;
 
 namespace UnityLibrary
 {

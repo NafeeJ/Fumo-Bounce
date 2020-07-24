@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class FumoController : MonoBehaviour
 {
-    public float movementSpeed;
+    [SerializeField]
+    private float movementSpeed;
     private Rigidbody2D fumoRigidbody;
     private SpriteRenderer fumoSprite;
 
-    // Start is called before the first frame update
     void Start()
     {
         fumoRigidbody = GetComponent<Rigidbody2D>();

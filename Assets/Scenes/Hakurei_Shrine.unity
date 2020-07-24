@@ -26,14 +26,14 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 3e5399bd195de7649b874f58c1b9f8a3, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -367,15 +367,27 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Cirno
-      m_Image: {fileID: 0}
     - m_Text: Alice
       m_Image: {fileID: 0}
     - m_Text: Chen
       m_Image: {fileID: 0}
+    - m_Text: Cirno
+      m_Image: {fileID: 0}
     - m_Text: Flandre
       m_Image: {fileID: 0}
     - m_Text: Marisa
+      m_Image: {fileID: 0}
+    - m_Text: Patchouli
+      m_Image: {fileID: 0}
+    - m_Text: Ran
+      m_Image: {fileID: 0}
+    - m_Text: Reimu
+      m_Image: {fileID: 0}
+    - m_Text: Remilia
+      m_Image: {fileID: 0}
+    - m_Text: Sakuya
+      m_Image: {fileID: 0}
+    - m_Text: Yukari
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -625,7 +637,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1081,7 +1093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cirno
+  m_text: Alice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1219,7 +1231,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 200}
+  m_SizeDelta: {x: 0, y: 440}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &843289254
 MonoBehaviour:
@@ -1357,7 +1369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0.000019073486}
   m_SizeDelta: {x: 0, y: 40}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &950760873
@@ -1416,12 +1428,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0344c59c679e83749b24f053c1f984eb, type: 3}
+  m_Sprite: {fileID: 177221625319731080, guid: 63ab99059e9f4f84084c48084233a23e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.32, y: 5.39}
+  m_Size: {x: 14.0199995, y: 9.003174}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1788,9 +1800,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1182530193
 MonoBehaviour:
@@ -1859,7 +1871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1414103182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2162,11 +2174,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1414103181}
-  cirno: {fileID: 3200243966661589516, guid: a6f079a330d1bfe4e90c53e2e7c19af4, type: 3}
   alice: {fileID: 4752135351244467340, guid: 2c13cf1fcdb8cdd42826ae22fb26b70a, type: 3}
   chen: {fileID: 4244972968075459047, guid: aebe236277e019c4ca0e0b3038d481ad, type: 3}
+  cirno: {fileID: 3200243966661589516, guid: a6f079a330d1bfe4e90c53e2e7c19af4, type: 3}
   flandre: {fileID: 8966343724806796405, guid: af08cd693523ab94686e78341ff93141, type: 3}
   marisa: {fileID: 9202850962984016612, guid: a33c9c7ba3c08c64f9a84cd5a214e7aa, type: 3}
+  patchouli: {fileID: 2554223225312268982, guid: 5937b2b6c15736348b3befc943b43dc5,
+    type: 3}
+  ran: {fileID: 3259067708872950568, guid: 4306e45eb15d910428185eb010821342, type: 3}
+  reimu: {fileID: 1975338889410547028, guid: cb225d8fc47627c4c98b70da4a3aa1ae, type: 3}
+  remilia: {fileID: 8306048947370494607, guid: 1e92a85b1df627f45943eb833166cc04, type: 3}
+  sakuya: {fileID: 2288473842298305097, guid: 6d542d8c49bd48d409daffe4ca23ceee, type: 3}
+  yukari: {fileID: 7501624430431821514, guid: f92cd40fca3a4834da7747255f9f14f1, type: 3}
 --- !u!1 &1512311499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2201,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1512311500
 Transform:
@@ -2260,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f263a01ae1cb6448f8a038d4e571c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fumoToSpawn: {fileID: 3200243966661589516, guid: a6f079a330d1bfe4e90c53e2e7c19af4,
+  fumoToSpawn: {fileID: 4752135351244467340, guid: 2c13cf1fcdb8cdd42826ae22fb26b70a,
     type: 3}
 --- !u!1 &1549525451
 GameObject:
@@ -2425,7 +2444,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.79999995}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2548,7 +2567,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1628105735}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.79999995
+  m_Size: 0.90909094
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
