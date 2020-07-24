@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -41,6 +43,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             switch (gamePaused)
             {
                 case true:
@@ -69,39 +72,47 @@ public class PauseMenuController : MonoBehaviour
 
     public void SelectFumo(int selection)
     {
+        if (selection != 0)
+        {
+            mySpawnFumo.spawnRandom = false;
+        }
+
         switch (selection)
         {
             case 0:
-                mySpawnFumo.fumoToSpawn = alice;
+                mySpawnFumo.spawnRandom = true;
                 break;
             case 1:
-                mySpawnFumo.fumoToSpawn = chen;
+                mySpawnFumo.fumoToSpawn = alice;
                 break;
             case 2:
-                mySpawnFumo.fumoToSpawn = cirno;
+                mySpawnFumo.fumoToSpawn = chen;
                 break;
             case 3:
-                mySpawnFumo.fumoToSpawn = flandre;
+                mySpawnFumo.fumoToSpawn = cirno;
                 break;
             case 4:
-                mySpawnFumo.fumoToSpawn = marisa;
+                mySpawnFumo.fumoToSpawn = flandre;
                 break;
             case 5:
-                mySpawnFumo.fumoToSpawn = patchouli;
+                mySpawnFumo.fumoToSpawn = marisa;
                 break;
             case 6:
-                mySpawnFumo.fumoToSpawn = ran;
+                mySpawnFumo.fumoToSpawn = patchouli;
                 break;
             case 7:
-                mySpawnFumo.fumoToSpawn = reimu;
+                mySpawnFumo.fumoToSpawn = ran;
                 break;
             case 8:
-                mySpawnFumo.fumoToSpawn = remilia;
+                mySpawnFumo.fumoToSpawn = reimu;
                 break;
             case 9:
-                mySpawnFumo.fumoToSpawn = sakuya;
+                mySpawnFumo.fumoToSpawn = remilia;
                 break;
             case 10:
+                mySpawnFumo.fumoToSpawn = sakuya;
+                break;
+            case 11:
                 mySpawnFumo.fumoToSpawn = yukari;
                 break;
         }
