@@ -1,34 +1,20 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu = null;
 
-    [SerializeField]
-    private GameObject alice;
-    [SerializeField]
-    private GameObject chen;
-    [SerializeField]
-    private GameObject cirno;
-    [SerializeField]
-    private GameObject flandre;
-    [SerializeField]
-    private GameObject marisa;
-    [SerializeField]
-    private GameObject patchouli;
-    [SerializeField]
-    private GameObject ran;
-    [SerializeField]
-    private GameObject reimu;
-    [SerializeField]
-    private GameObject remilia;
-    [SerializeField]
-    private GameObject sakuya;
-    [SerializeField]
-    private GameObject yukari;
+    [SerializeField] private GameObject alice = null;
+    [SerializeField] private GameObject chen = null;
+    [SerializeField] private GameObject cirno = null;
+    [SerializeField] private GameObject flandre = null;
+    [SerializeField] private GameObject marisa = null;
+    [SerializeField] private GameObject patchouli = null;
+    [SerializeField] private GameObject ran = null;
+    [SerializeField] private GameObject reimu = null;
+    [SerializeField] private GameObject remilia = null;
+    [SerializeField] private GameObject sakuya = null;
+    [SerializeField] private GameObject yukari = null;
 
     private bool gamePaused;
     private SpawnFumo mySpawnFumo;
@@ -43,7 +29,6 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
             switch (gamePaused)
             {
                 case true:

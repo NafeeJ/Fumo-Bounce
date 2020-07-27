@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class FumoController : MonoBehaviour
 {
-    [SerializeField]
-    private float movementSpeed;
+    public float movementSpeed;
+
     private Rigidbody2D fumoRigidbody;
     private SpriteRenderer fumoSprite;
 
@@ -37,12 +37,15 @@ public class FumoController : MonoBehaviour
 
     public IEnumerator DisappearFumoCoroutine()
     {
-        while (fumoSprite.color.a > 0)
+        while (fumoSprite != null && fumoSprite.color.a > 0)
         {
             fumoSprite.color = new Color(255, 255, 255, fumoSprite.color.a - Time.deltaTime);
             yield return null;
         }
 
-        Destroy(this.gameObject); // :(
+        if (this != null)
+        {
+            Destroy(this.gameObject); // :(
+        }
     }
 }
