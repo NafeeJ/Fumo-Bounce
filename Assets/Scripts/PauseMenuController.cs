@@ -60,6 +60,7 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
+        pauseMenu.transform.Find("ResumeButton").transform.localScale = new Vector3(1f, 1f, 1f);
         gamePaused = false;
     }
 
