@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3259067708872950566}
   - component: {fileID: 3259067708872950563}
   - component: {fileID: 7314623460345699599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ran Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

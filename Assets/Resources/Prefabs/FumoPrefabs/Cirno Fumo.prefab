@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3200243966661589506}
   - component: {fileID: 3200243966661589511}
   - component: {fileID: 653808004233807406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cirno Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

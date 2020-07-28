@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2288473842298305095}
   - component: {fileID: 2288473842298305090}
   - component: {fileID: 6303352061534921838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sakuya Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8306048947370494593}
   - component: {fileID: 8306048947370494596}
   - component: {fileID: 4322690496652891304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Remilia Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

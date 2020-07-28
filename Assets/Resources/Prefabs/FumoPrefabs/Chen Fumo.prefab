@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4244972968075459049}
   - component: {fileID: 4244972968075459052}
   - component: {fileID: 8237479493098317760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chen Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

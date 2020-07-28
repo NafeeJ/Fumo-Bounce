@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4752135351244467330}
   - component: {fileID: 4752135351244467335}
   - component: {fileID: 669543708226876075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Alice Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

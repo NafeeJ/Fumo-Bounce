@@ -394,7 +394,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1460459360}
+      - m_Target: {fileID: 1512311503}
         m_MethodName: SelectFumo
         m_Mode: 0
         m_Arguments:
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9960785, g: 0.9333334, b: 0.8431373, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.882353, g: 0, b: 0.16470589, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2133,7 +2133,6 @@ GameObject:
   - component: {fileID: 1460459358}
   - component: {fileID: 1460459357}
   - component: {fileID: 1460459356}
-  - component: {fileID: 1460459360}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2222,31 +2221,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1460459360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460459355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1abd1a0e2f79e7647aca3ba1aa03104c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1414103181}
-  alice: {fileID: 4752135351244467340, guid: 2c13cf1fcdb8cdd42826ae22fb26b70a, type: 3}
-  chen: {fileID: 4244972968075459047, guid: aebe236277e019c4ca0e0b3038d481ad, type: 3}
-  cirno: {fileID: 3200243966661589516, guid: a6f079a330d1bfe4e90c53e2e7c19af4, type: 3}
-  flandre: {fileID: 8966343724806796405, guid: af08cd693523ab94686e78341ff93141, type: 3}
-  marisa: {fileID: 9202850962984016612, guid: a33c9c7ba3c08c64f9a84cd5a214e7aa, type: 3}
-  patchouli: {fileID: 2554223225312268982, guid: 5937b2b6c15736348b3befc943b43dc5,
-    type: 3}
-  ran: {fileID: 3259067708872950568, guid: 4306e45eb15d910428185eb010821342, type: 3}
-  reimu: {fileID: 1975338889410547028, guid: cb225d8fc47627c4c98b70da4a3aa1ae, type: 3}
-  remilia: {fileID: 8306048947370494607, guid: 1e92a85b1df627f45943eb833166cc04, type: 3}
-  sakuya: {fileID: 2288473842298305097, guid: 6d542d8c49bd48d409daffe4ca23ceee, type: 3}
-  yukari: {fileID: 7501624430431821514, guid: f92cd40fca3a4834da7747255f9f14f1, type: 3}
 --- !u!1 &1512311499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2231,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1512311500}
   - component: {fileID: 1512311501}
+  - component: {fileID: 1512311502}
+  - component: {fileID: 1512311503}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -2290,6 +2266,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db6302b004a5644db530ea893d322bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1512311502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512311499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bd9d4545ad62f4d80515ec2116709d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DragLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_Damping: 1
+  m_Frequency: 7
+--- !u!114 &1512311503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512311499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1abd1a0e2f79e7647aca3ba1aa03104c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1414103181}
+  alice: {fileID: 4752135351244467340, guid: 2c13cf1fcdb8cdd42826ae22fb26b70a, type: 3}
+  chen: {fileID: 4244972968075459047, guid: aebe236277e019c4ca0e0b3038d481ad, type: 3}
+  cirno: {fileID: 3200243966661589516, guid: a6f079a330d1bfe4e90c53e2e7c19af4, type: 3}
+  flandre: {fileID: 8966343724806796405, guid: af08cd693523ab94686e78341ff93141, type: 3}
+  marisa: {fileID: 9202850962984016612, guid: a33c9c7ba3c08c64f9a84cd5a214e7aa, type: 3}
+  patchouli: {fileID: 2554223225312268982, guid: 5937b2b6c15736348b3befc943b43dc5,
+    type: 3}
+  ran: {fileID: 3259067708872950568, guid: 4306e45eb15d910428185eb010821342, type: 3}
+  reimu: {fileID: 1975338889410547028, guid: cb225d8fc47627c4c98b70da4a3aa1ae, type: 3}
+  remilia: {fileID: 8306048947370494607, guid: 1e92a85b1df627f45943eb833166cc04, type: 3}
+  sakuya: {fileID: 2288473842298305097, guid: 6d542d8c49bd48d409daffe4ca23ceee, type: 3}
+  yukari: {fileID: 7501624430431821514, guid: f92cd40fca3a4834da7747255f9f14f1, type: 3}
 --- !u!1 &1545704421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,7 +2444,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1460459360}
+      - m_Target: {fileID: 1512311503}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:

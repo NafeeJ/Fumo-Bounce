@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9202850962984016618}
   - component: {fileID: 9202850962984016623}
   - component: {fileID: 3967481782797026499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Marisa Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

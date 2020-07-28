@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1975338889410547034}
   - component: {fileID: 1975338889410547039}
   - component: {fileID: 6039779931785909107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Reimu Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

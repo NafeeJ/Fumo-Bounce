@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2554223225312268984}
   - component: {fileID: 2554223225312268989}
   - component: {fileID: 7767064374274886801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Patchouli Fumo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
