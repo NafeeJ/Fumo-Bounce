@@ -8,7 +8,7 @@ public class FumoController : MonoBehaviour
     private Rigidbody2D fumoRigidbody;
     private SpriteRenderer fumoSprite;
 
-    void Start()
+    void Awake()
     {
         fumoRigidbody = GetComponent<Rigidbody2D>();
         fumoSprite = GetComponent<SpriteRenderer>();

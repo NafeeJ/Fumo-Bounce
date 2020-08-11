@@ -20,21 +20,24 @@ public class DragTarget : MonoBehaviour
 
 	private TargetJoint2D m_TargetJoint;
 
+	private GameObject selectedFumo;
+	private Vector2 selectedFumoScale;
+
 	void Update ()
 	{
 		// Calculate the world position for the mouse.
-		var worldPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		Vector2 worldPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
 		if (Input.GetMouseButtonDown (0))
 		{
 			// Fetch the first collider.
 			// NOTE: We could do this for multiple colliders.
-			var collider = Physics2D.OverlapPoint (worldPos, m_DragLayers);
+			Collider2D collider = Physics2D.OverlapPoint (worldPos, m_DragLayers);
 			if (!collider)
 				return;
 
 			// Fetch the collider body.
-			var body = collider.attachedRigidbody;
+			Rigidbody2D body = collider.attachedRigidbody;
 			if (!body)
 				return;
 
@@ -44,12 +47,22 @@ public class DragTarget : MonoBehaviour
 			m_TargetJoint.frequency = m_Frequency;
 
 			// Attach the anchor to the local-point where we clicked.
-			m_TargetJoint.anchor = m_TargetJoint.transform.InverseTransformPoint (worldPos);		
+			m_TargetJoint.anchor = m_TargetJoint.transform.InverseTransformPoint (worldPos);
+
+			selectedFumo = body.gameObject;
+			selectedFumoScale = selectedFumo.transform.localScale;
+			selectedFumo.transform.localScale = new Vector2(selectedFumoScale.x * 1.1f, selectedFumoScale.y * 1.1f);
 		}
 		else if (Input.GetMouseButtonUp (0))
 		{
 			Destroy (m_TargetJoint);
 			m_TargetJoint = null;
+
+			if (selectedFumo != null)
+			{
+				selectedFumo.transform.localScale = selectedFumoScale;
+			}
+
 			return;
 		}
 

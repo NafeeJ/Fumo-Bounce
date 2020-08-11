@@ -7,11 +7,13 @@ public class CameraController : MonoBehaviour
 
     private Camera myCamera;
     private EdgeCollider2D cameraColliders;
+    private Vector2[] colliderPoints;
 
     void Start()
     {
         myCamera = GetComponent<Camera>();
         cameraColliders = GetComponent<EdgeCollider2D>();
+        colliderPoints = new Vector2[5];
         UpdateCrop();
         SetEdgeColliders();
     }
@@ -58,15 +60,13 @@ public class CameraController : MonoBehaviour
     public void SetEdgeColliders()
     {
         Vector2 lDCorner = myCamera.ViewportToWorldPoint(new Vector3(0, 0f, myCamera.nearClipPlane));
-        Vector2 rUCorner = myCamera.ViewportToWorldPoint(new Vector3(1f, 1f, myCamera.nearClipPlane));
-
-        Vector2[] colliderPoints = new Vector2[5];
+        Vector2 rUCorner = myCamera.ViewportToWorldPoint(new Vector3(1f, 1f, myCamera.nearClipPlane)); 
 
         colliderPoints[0] = new Vector2(lDCorner.x, lDCorner.y);
         colliderPoints[1] = new Vector2(lDCorner.x, rUCorner.y);
         colliderPoints[2] = new Vector2(rUCorner.x, rUCorner.y);
         colliderPoints[3] = new Vector2(rUCorner.x, lDCorner.y);
-        colliderPoints[4] = new Vector2(lDCorner.x, lDCorner.y);
+        colliderPoints[4] = colliderPoints[0];
 
         cameraColliders.points = colliderPoints;
     }
