@@ -1,0 +1,16 @@
+{
+"companyName": "Nafee Workshop",
+"productName": "Fumo-Bounce",
+"productVersion": "1.0",
+"dataUrl": "gh-pages.data.unityweb",
+"wasmCodeUrl": "gh-pages.wasm.code.unityweb",
+"wasmFrameworkUrl": "gh-pages.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.1f1"
+}
