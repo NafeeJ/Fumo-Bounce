@@ -6,14 +6,14 @@ public class CameraController : MonoBehaviour
     public Vector2 targetAspect = new Vector2(16, 9);
 
     private Camera myCamera;
-    private EdgeCollider2D cameraColliders;
-    private Vector2[] colliderPoints;
+    private EdgeCollider2D cameraCollider;
+    private Vector2[] edgePoints;
 
     void Start()
     {
         myCamera = GetComponent<Camera>();
-        cameraColliders = GetComponent<EdgeCollider2D>();
-        colliderPoints = new Vector2[5];
+        cameraCollider = GetComponent<EdgeCollider2D>();
+        edgePoints = new Vector2[5];
         UpdateCrop();
         SetEdgeColliders();
     }
@@ -56,18 +56,21 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    //Modified and Adapted from: https://forum.unity.com/threads/collision-with-sides-of-screen.228865/
     public void SetEdgeColliders()
     {
-        Vector2 lDCorner = myCamera.ViewportToWorldPoint(new Vector3(0, 0f, myCamera.nearClipPlane));
-        Vector2 rUCorner = myCamera.ViewportToWorldPoint(new Vector3(1f, 1f, myCamera.nearClipPlane)); 
+        //Vector2's for the corners of the screen
+        Vector2 bottomLeft =  myCamera.ScreenToWorldPoint(new Vector3(0, 0, myCamera.nearClipPlane));
+        Vector2 topRight = myCamera.ScreenToWorldPoint(new Vector3(myCamera.pixelWidth, myCamera.pixelHeight, myCamera.nearClipPlane));
+        Vector2 topLeft = new Vector2(bottomLeft.x, topRight.y);
+        Vector2 bottomRight = new Vector2(topRight.x, bottomLeft.y);
 
-        colliderPoints[0] = new Vector2(lDCorner.x, lDCorner.y);
-        colliderPoints[1] = new Vector2(lDCorner.x, rUCorner.y);
-        colliderPoints[2] = new Vector2(rUCorner.x, rUCorner.y);
-        colliderPoints[3] = new Vector2(rUCorner.x, lDCorner.y);
-        colliderPoints[4] = colliderPoints[0];
+        //Update Vector2 array for edge collider
+        edgePoints[0] = bottomLeft;
+        edgePoints[1] = topLeft;
+        edgePoints[2] = topRight;
+        edgePoints[3] = bottomRight;
+        edgePoints[4] = bottomLeft;
 
-        cameraColliders.points = colliderPoints;
+        cameraCollider.points = edgePoints;
     }
 }
