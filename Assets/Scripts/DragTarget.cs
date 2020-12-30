@@ -20,15 +20,15 @@ public class DragTarget : MonoBehaviour
 
 	private TargetJoint2D m_TargetJoint;
 
-	private GameObject selectedFumo;
-	private Vector2 selectedFumoScale;
+	private GameObject selectedObj;
+	private Vector2 selectedObjScale;
 
 	void Update ()
 	{
 		// Calculate the world position for the mouse.
 		Vector2 worldPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-		if (Input.GetMouseButtonDown (0))
+		if (Input.GetMouseButtonDown (0) && !SceneController.gamePaused)
 		{
 			// Fetch the first collider.
 			// NOTE: We could do this for multiple colliders.
@@ -49,18 +49,18 @@ public class DragTarget : MonoBehaviour
 			// Attach the anchor to the local-point where we clicked.
 			m_TargetJoint.anchor = m_TargetJoint.transform.InverseTransformPoint (worldPos);
 
-			selectedFumo = body.gameObject;
-			selectedFumoScale = selectedFumo.transform.localScale;
-			selectedFumo.transform.localScale = new Vector2(selectedFumoScale.x * 1.1f, selectedFumoScale.y * 1.1f);
+			selectedObj = body.gameObject;
+			selectedObjScale = selectedObj.transform.localScale;
+			selectedObj.transform.localScale = new Vector2(selectedObjScale.x * 1.1f, selectedObjScale.y * 1.1f);
 		}
 		else if (Input.GetMouseButtonUp (0))
 		{
 			Destroy (m_TargetJoint);
 			m_TargetJoint = null;
 
-			if (selectedFumo != null)
+			if (selectedObj != null)
 			{
-				selectedFumo.transform.localScale = selectedFumoScale;
+				selectedObj.transform.localScale = selectedObjScale;
 			}
 
 			return;

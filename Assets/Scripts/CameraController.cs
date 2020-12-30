@@ -3,7 +3,7 @@
 public class CameraController : MonoBehaviour
 {
     // Set this to your target aspect ratio, eg. (16, 9) or (4, 3).
-    public Vector2 targetAspect = new Vector2(16, 9);
+    public Vector2 targetAspect;
 
     private Camera myCamera;
     private EdgeCollider2D cameraCollider;
@@ -11,10 +11,10 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
+        targetAspect = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
         myCamera = GetComponent<Camera>();
         cameraCollider = GetComponent<EdgeCollider2D>();
         edgePoints = new Vector2[5];
-        UpdateCrop();
         SetEdgeColliders();
     }
 
@@ -22,7 +22,6 @@ public class CameraController : MonoBehaviour
     {
         if (Screen.width != targetAspect.x || Screen.height != targetAspect.y)
         {
-            UpdateCrop();
             SetEdgeColliders();
         }
     }

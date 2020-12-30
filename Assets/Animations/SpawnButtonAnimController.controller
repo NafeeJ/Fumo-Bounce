@@ -235,7 +235,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FumoButtonAnimController
+  m_Name: SpawnButtonAnimController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Normal
@@ -362,7 +362,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: 1.2, y: 1.2, z: 1}
+        value: {x: 1.1, y: 1.1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -565,7 +565,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.2
+        value: 1.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -593,7 +593,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.2
+        value: 1.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -948,7 +948,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: 0.8, y: 0.8, z: 1}
+        value: {x: 0.9, y: 0.9, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -974,7 +974,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1
+        value: 0.9960785
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1002,7 +1002,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.74150944
+        value: 0.9333334
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1030,7 +1030,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.3537736
+        value: 0.83921576
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1151,7 +1151,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.8
+        value: 0.9
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1179,7 +1179,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.8
+        value: 0.9
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1235,7 +1235,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1
+        value: 0.9960785
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1263,7 +1263,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.74150944
+        value: 0.9333334
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1291,7 +1291,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 0.3537736
+        value: 0.83921576
         inSlope: 0
         outSlope: 0
         tangentMode: 136
